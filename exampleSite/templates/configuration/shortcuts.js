@@ -1,7 +1,7 @@
 import {
   addElementToModal,
-  displayModal
-} from '/js/theme/modules/helpers.min.js'
+  displayModal,
+} from '/js/theme/modules/helpers.min.js';
 
 window.scExample = scExample;
 
