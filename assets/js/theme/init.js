@@ -1,3 +1,4 @@
+import { resizeFunctionsList, shortcutsKeys } from './modules/const.min.js';
 import {
   addElementToModal,
   closeModals,
@@ -5,13 +6,15 @@ import {
   getFirstAncestorByClass,
   isPreCopyToEnable,
 } from './modules/helpers.min.js';
-import { resizeFunctionsList, shortcutsKeys } from './modules/const.min.js';
 
 // VARS //
 // MAIN //
 document.addEventListener('DOMContentLoaded', function () {
   // Manage shortcuts
   let keyBuffer = [];
+  window.addEventListener('blur', () => {
+    keyBuffer = [];
+  });
   document.addEventListener('keyup', function (e) {
     const keyIndex = keyBuffer.indexOf(e.key);
     if (keyIndex > -1) {
@@ -39,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ) {
               e.preventDefault();
               window[shortcutsKeys[shortcut].function]();
+              keyBuffer = [];
             }
           }
         }
