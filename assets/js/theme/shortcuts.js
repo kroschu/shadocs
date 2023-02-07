@@ -1,4 +1,7 @@
-import { closeModals, isFocusable } from './modules/helpers.min.js';
+import {
+  closeModals,
+  isFocusable
+} from './modules/helpers.min.js'
 
 // VARS //
 // MAIN //
@@ -13,9 +16,7 @@ function scShowInfo() {
 window.scShowShortcuts = scShowShortcuts;
 function scShowShortcuts() {
   closeModals();
-  document
-    .getElementById('navbarShortcuts')
-    .classList.toggle('is-hidden', false);
+  document.getElementById('navbarShortcuts').classList.toggle('is-hidden', false);
   document.getElementById('search').blur();
 }
 // Function to go to homepage

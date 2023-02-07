@@ -53,9 +53,9 @@
           <div class='card{{if $sidebarRoot.Scratch.Get "isSidebarActive"}} is-sidebar-active{{end}}'{{if $sidebarRoot.Scratch.Get "isSidebarActive"}} id='sidebarActiveEntry'{{end}}>
             {{template "sidebarSectionIcon" dict "this" . "sidebarroot" $sidebarRoot "linkWeight" $linkWeight "isLabel" true}}
             {{if gt $linkWeight 0}}
-              <a class='card-header-icon is-icon-expandable is-paddingless{{if gt $linkWeight 0}}{{if .IsAncestor $sidebarRoot}} is-icon-expanded{{else}} is-icon-shrinked{{end}}{{end}}'>
-                <span class='icon'></span>
-              </a>
+                <a class='card-header-icon is-icon-expandable is-paddingless{{if gt $linkWeight 0}}{{if .IsAncestor $sidebarRoot}} is-icon-expanded{{else}} is-icon-shrinked{{end}}{{end}}'>
+                  <span class='icon'></span>
+                </a>
             </div>
           </div>
           <ul class='is-marginless{{if $sidebarRoot.Scratch.Get "isTreeActive"}} is-tree-active{{end}}'>
